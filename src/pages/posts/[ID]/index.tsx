@@ -25,5 +25,5 @@ export async function getStaticProps(context: { params: { ID: string } }) {
 
   const res = await fetch(`https://dummyjson.com/posts/${params.ID}`);
   const post = await res.json();
-  return { props: { post } };
+  return { props: { post }, revalidate: 20 };
 }

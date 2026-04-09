@@ -16,5 +16,5 @@ export default Posts;
 export async function getStaticProps() {
   const res = await fetch(`https://dummyjson.com/posts`);
   const posts = await res.json();
-  return { props: { posts } };
+  return { props: { posts }, revalidate: 20 };
 }
