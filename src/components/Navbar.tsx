@@ -2,18 +2,19 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
-      <div className="flex-1">
-        <a className="btn btn-ghost text-xl">BLOG</a>
+    <nav className="border-b border-gray-800 px-6 py-4 flex items-center justify-between">
+      <Link href="/" className="text-lg font-bold text-white">
+        BLOG
+      </Link>
+      <div className="flex gap-4">
+        <Link href="/posts" className="text-gray-400 hover:text-white transition-colors">
+          Posts
+        </Link>
+        <Link href="/posts/create" className="text-gray-400 hover:text-white transition-colors">
+          New Post
+        </Link>
       </div>
-      <div className="flex-none">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <Link href="/posts">FEED</Link>
-          </li>
-        </ul>
-      </div>
-    </div>
+    </nav>
   );
 }
 

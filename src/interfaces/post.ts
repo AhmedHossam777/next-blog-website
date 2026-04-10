@@ -1,19 +1,6 @@
 export interface IPost {
-  id: number;
+  _id: string;
   title: string;
   body: string;
   tags: string[];
-  reactions: {
-    likes: number;
-    dislikes: number;
-  };
-  views: number;
-  userId: number;
-}
-
-export interface IPostsResponse {
-  posts: IPost[];
-  total: number;
-  skip: number;
-  limit: number;
 }

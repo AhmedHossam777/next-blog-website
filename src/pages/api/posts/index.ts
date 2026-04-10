@@ -15,7 +15,6 @@ export default async function handler(req: any, res: any) {
       title,
       body,
       tags,
-      userId,
     });
 
     return res.status(201).json({
